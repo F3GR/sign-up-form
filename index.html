@@ -23,43 +23,43 @@
             Photo by Halie West on Unsplash
         </div>
     </div>
-    <div class="greetbox">
-        <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
-        <br>
-        Sign up<em>now</em> to get started.
-        </p>
-        <p>You <em>know</em> you want to.</p>
-    </div>
-    <form class="registration" method="post">
-        <h2>Let's do this!</h2>
-        <div class="field">
-            <label for="first-name">First name</label>
-            <input type="text" id="first-name" name="first-name" maxlength="50" />
+    <div class="flex-container">
+        <div class="greetbox">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+            <p>Sign up<em>now</em> to get started.</p>
+            <p>You <em>know</em> you want to.</p>
         </div>
-        <div class="field">
-            <label for="last-name">Last name</label>
-            <input type="text" id="last-name" name="last-name" maxlength="50"/>
+        <form class="registration" method="post">
+            <h2>Let's do this!</h2>
+            <div class="field">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" name="first-name" maxlength="50" />
+            </div>
+            <div class="field">
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" name="last-name" maxlength="50"/>
+            </div>
+            <div class="field">
+                <label for="email">E-mail<span class="asterisk-required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="example@com" required />
+            </div>
+            <div class="field">
+                <label for="tel">Phone number</label>
+                <input type="tel" id="tel" name="tel" maxlength="15" placeholder="+999-123456789" />
+            </div>
+            <div class="field">
+                <label for="password">Password<span class="asterisk-required">*</span></label>
+                <input type="password" id="password" name="password" minlength="8" maxlength="20" required />
+            </div>
+            <div class="field">
+                <label for="password-check">Confirm password<span class="asterisk-required">*</span></label>
+                <input type="password" id="password-check" name="password-check" minlength="8" maxlength="20" required />
+            </div>
+            </form>
+        <div class="options-box">
+            <button type="submit">Create account</button>
+            <p>Already have an account? <a href="">Log in</a></p>
         </div>
-        <div class="field">
-            <label for="email">E-mail<span class="asterisk-required">*</span></label>
-            <input type="email" id="email" name="email" placeholder="example@com" required />
-        </div>
-        <div class="field">
-            <label for="tel">Phone number</label>
-            <input type="tel" id="tel" name="tel" maxlength="15" placeholder="+999-123456789" />
-        </div>
-        <div class="field">
-            <label for="password">Password<span class="asterisk-required">*</span></label>
-            <input type="password" id="password" name="password" minlength="8" maxlength="20" required />
-        </div>
-        <div class="field">
-            <label for="password-check">Confirm password<span class="asterisk-required">*</span></label>
-            <input type="password" id="password-check" name="password-check" minlength="8" maxlength="20" required />
-        </div>
-        </form>
-    <div class="options-box">
-        <button type="submit">Create account</button>
-        <p>Already have an account? <a href="">Log in</a></p>
     </div>
 	<script src="./script.js"></script>
 </body>

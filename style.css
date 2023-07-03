@@ -4,11 +4,8 @@
 }
 
 body {
-    background-color: hsl(0, 0%, 90%)
-}
-
-body > * {
-    min-height: 200px;
+    background-color: hsl(0, 0%, 90%);
+    height: 100%;
 }
 
 .logo-box {
@@ -70,6 +67,11 @@ body > * {
     padding: 5%;
 }
 
+.greetbox p {
+    font-weight: bold;
+    line-height: 2rem;
+}
+
 form {
     background-color: whitesmoke;
 }
@@ -82,6 +84,12 @@ form h2 {
 .field {
     width: 100%;
     margin-top: 1rem;
+    transition: transform 0.1s ease;
+}
+
+.field label:hover {
+    font-weight: bold;
+    transform: scale(1.1) translateX(1.5rem);
 }
 
 .field label {
@@ -150,6 +158,112 @@ form h2 {
     color: hsl(126, 29%, 35%);
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
+    html {
+        font-size: 50%;
+    }
+    body {
+        display: flex;
+        flex-direction: row;
+        overflow-y: visible;
+    }
+    .logo-box {
+        width: 35%;
+        height: 878px;
+        display: inline-block;
+        padding-top: 10%;
+    }
+    .image {
+        width: 100%;
+        height: auto;
+    }
+    .image .logo {
+        padding: 5% 5%;
+        width: fit-content;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsla(0, 0%, 10%, 0.7);
+        position: relative;
+        margin-top: 0;
+    } 
+    .image .logo > * {
+        margin: 0;
+    } 
+    .image .logo img {
+        width: 20%;
+    }
+    .image .logo h1 {
+        display: block;
+        width: fit-content;
+        color: whitesmoke;
+        font-family: "NorseBold", Arial, Helvetica, sans-serif;
+        font-size: 8rem;
+    }   
+    .caption {
+        position: absolute;
+        top: 90%;
+        right: 40%;
+        height: 10%;
+        font-size: 1rem;
+        color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-container {
+        flex: 1;
+    }
+    .greetbox {
+        padding-top: 15rem;
+        max-width: 80%;
+    }
+    .greetbox p {
+        font-weight: bold;
+        line-height: 2rem;
+        max-width: 80rem;
+        overflow-wrap: break-word;
+    }
+    .registration {
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .registration > h2 {
+        flex: 1;
+        min-width: 100%;
+        font-size: 3rem;
+        margin-top: 0;
+    }
+    .registration > .field {
+        flex: 0 1 230px;
+        min-width: 230px;
+        margin: 2rem 5rem 0rem 2rem;
+    }
+    .field label:hover {
+        transform: scale(1.1) translateX(1rem);
+    }
 
+    .field:nth-child(even) {
+        margin-left: 0
+    }
+
+    .options-box {
+        padding-top: 0;
+        padding-bottom: 20rem;
+    }
+    .options-box button {
+        width: 25rem;
+        height: 6rem;
+        background-color: hsl(126, 29%, 35%);
+        color: whitesmoke;
+        border-radius: 12px;
+        box-shadow: 2px 2px 2px 2px darkgray;
+    }
 }
+
