@@ -50,14 +50,14 @@ selectedButton.addEventListener('keydown', function(e) {
 });
 
 function checkEquality() {
-    if (selectedPassword === selectedPasswordConfirmation) {
+    if (selectedPassword.value === selectedPasswordConfirmation.value && (selectedPasswordConfirmation.value.length >= 8)) {
         selectedPasswordConfirmation.classList.add('valid');
         selectedPasswordConfirmation.classList.remove('invalid');
         return true;
     } else {
         selectedPasswordConfirmation.classList.add('invalid');
         selectedPasswordConfirmation.classList.remove('valid');
-        selectedPasswordConfirmation.setAttribute('title', 'Confirmed password must be equal to the entered password');
+        selectedPasswordConfirmation.setAttribute('title', 'Confirmed password must be equal to the entered valid password');
         return false;
     }
 }
