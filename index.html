@@ -30,36 +30,36 @@
         </p>
         <p>You <em>know</em> you want to.</p>
     </div>
-    <form id="registration" action="./" method="post">
+    <form class="registration" method="post">
         <h2>Let's do this!</h2>
         <div class="field">
             <label for="first-name">First name</label>
-            <input type="text" autocomplete="first-name" id="first-name" name="first-name" required />
+            <input type="text" id="first-name" name="first-name" maxlength="50" />
         </div>
         <div class="field">
             <label for="last-name">Last name</label>
-            <input type="text" autocomplete="last-name" id="last-name" name="last-name" required />
+            <input type="text" id="last-name" name="last-name" maxlength="50"/>
         </div>
         <div class="field">
-            <label for="email">E-mail</label>
-            <input type="email" autocomplete="email" id="email" name="email" />
+            <label for="email">E-mail<span class="asterisk-required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="example@com" required />
         </div>
         <div class="field">
             <label for="tel">Phone number</label>
-            <input type="tel" autocomplete="tel" id="tel" name="tel" />
+            <input type="tel" id="tel" name="tel" maxlength="15" placeholder="+999-123456789" />
         </div>
         <div class="field">
-            <label for="password">Password</label>
-            <input type="password" autocomplete="password" id="password" name="password" />
+            <label for="password">Password<span class="asterisk-required">*</span></label>
+            <input type="password" id="password" name="password" minlength="8" maxlength="20" required />
         </div>
         <div class="field">
-            <label for="password-check">Confirm password</label>
-            <input type="password-check" autocomplete="password-check" id="password-check" name="password-check" />
+            <label for="password-check">Confirm password<span class="asterisk-required">*</span></label>
+            <input type="password" id="password-check" name="password-check" minlength="8" maxlength="20" required />
         </div>
         </form>
     <div class="options-box">
         <button type="submit">Create account</button>
-        <p>Don't have an account? Log in</p>
+        <p>Already have an account? <a href="">Log in</a></p>
     </div>
 	<script src="./script.js"></script>
 </body>

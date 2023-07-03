@@ -1,7 +1,10 @@
 @font-face {
     font-family: "NorseBold";
-    src: url("");
-    src: url("") format("otf"),
+    src: url("./originals/Norsebold.otf") format("opentype");
+}
+
+body {
+    background-color: hsl(0, 0%, 90%)
 }
 
 body > * {
@@ -14,21 +17,24 @@ body > * {
     background-size: cover;
     background-position: center;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image {
-    width: 50%;
     height: 100%;
     margin: auto;
 }
 
 .image .logo {
-    padding: 5% 0;
-    width: 100%;
+    padding: 5% 5%;
+    width: fit-content;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: hsla(0, 0%, 10%, 0.7);
 }
 
 .image .logo > * {
@@ -41,8 +47,10 @@ body > * {
 
 .image .logo h1 {
     display: block;
-    width: 60%;
+    width: fit-content;
     color: whitesmoke;
+    font-family: "NorseBold", Arial, Helvetica, sans-serif;
+    font-size: 8rem;
 }
 
 .caption {
@@ -58,16 +66,16 @@ body > * {
 }
 
 .greetbox, form, .options-box {
-    margin: 0 5%;
+    margin-top: 0;
+    padding: 5%;
 }
 
-form, .options-box {
-    margin-top: 0;
-    margin: 0 5%;
+form {
+    background-color: whitesmoke;
 }
 
 form h2 {
-    margin-top: 1rem;
+    margin-top: 0;
     font-size: 1.6rem;
 }
 
@@ -78,10 +86,43 @@ form h2 {
 
 .field label {
     margin-bottom: 0.5rem;
+    color: rgb(76, 76, 76);
 }
 
 .field input {
     height: 3.5rem;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+}
+
+.field input:optional {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid darkgray;
+}
+
+.field input.invalid {
+    border: 1px solid red;
+}
+
+.field input.valid {
+    border: 1px solid hsl(126, 29%, 35%);
+    background:hsl(0, 0%, 95%);
+}
+
+.field input:focus {
+    outline: none;
+    border: 2px solid gray;
+    background:hsl(0, 0%, 95%);
+}
+
+.field .asterisk-required {
+    color: red;
+    font-weight: bolder;
+}
+
+.field input::placeholder {
+    color: darkgray;
 }
 
 .field:first-of-type {
@@ -89,7 +130,7 @@ form h2 {
 }
 
 .field:last-of-type {
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 .options-box {
@@ -98,11 +139,16 @@ form h2 {
 
 .options-box button {
     height: 6rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
+    background-color: hsl(126, 29%, 35%);
+    color: whitesmoke;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px 2px darkgray;
 }
 
-
-
+.options-box a {
+    color: hsl(126, 29%, 35%);
+}
 
 @media (min-width: 700px) {
 
